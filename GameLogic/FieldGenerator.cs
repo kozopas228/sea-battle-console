@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GameLogic
 {
@@ -48,31 +46,11 @@ namespace GameLogic
                         }
                     }
 
-                    //var nearest = GetNearestPoints(pointsToPlace, field.Size);
-
-                    //var shipsCoordsInField = field.Ships.SelectMany(x => x.Points).ToList();
-
-
-                    //bool hasFreePlace = true;
-                    //foreach (var point in nearest)
-                    //{
-                    //    if (shipsCoordsInField.Count(x => x.X == point.X && x.Y == point.Y) > 0 ||
-                    //        pointsToPlace.Any(x => x.X >= field.Size || x.X < 0 || x.Y >= field.Size || x.Y < 0))
-                    //    {
-                    //        hasFreePlace = false;
-                    //        break;
-                    //    }
-                    //}
-
-
-
                     ship.Direction = direction;
                     ship.Points = pointsToPlace;
 
-                    //placed = hasFreePlace;
                     placed = FieldCreator.Place(ship, field);
                 }
-                //field.Ships.Add(ship);
             }
             
         }

@@ -8,7 +8,6 @@ namespace GameLogic
         public static Field Create(int size = 10)
         {
             Field field = new Field{Size = size};
-            //field.Ships = FieldGenerator.CreateBlankShips();
             field.Ships = new List<Ship>();
             return field;
         }

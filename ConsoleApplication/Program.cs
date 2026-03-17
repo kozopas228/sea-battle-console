@@ -115,21 +115,9 @@ namespace ConsoleApplication
                     fieldTwo = CreateField("Player 2");
                 }
             }
-
+            
             Play(fieldOne, fieldTwo);
-
-
         }
-
-
-        //IMemento memento1 = new JsonMemento("C:\\Users\\CSharpSila\\Desktop\\mem.json");
-        //memento1.Save(fieldOne);
-
-        //memento1 = new XmlMemento("C:\\Users\\CSharpSila\\Desktop\\mem.xml");
-        //memento1.Save(fieldTwo);
-
-        //Console.Clear();
-        //Console.WriteLine("Saved");
 
         static void Play(Field fieldOne, Field fieldTwo)
         {
@@ -175,15 +163,10 @@ namespace ConsoleApplication
                             
                             break;
                         }
-                            
-
                     }
                     continue;
                 }
-
-
-
-
+                
                 Console.SetCursorPosition(f2.Size + f1.Size + 15, f2.Size + 8);
                 Console.Write("                                      ");
                 var leftOffset = 3;
@@ -294,17 +277,6 @@ namespace ConsoleApplication
                             }
                         }
 
-                        //foreach (var ship in f2.Ships)
-                        //{
-                        //    if (b) break;
-                        //    if (ship.Points.Contains(new Point(j, i)))
-                        //    {
-                        //        Console.Write("■ ");
-                        //        b = true;
-                        //        break;
-                        //    }
-                        //}
-
                         foreach (var missed in f2.Missed)
                         {
                             if (missed == new Point(j, i))
@@ -380,12 +352,8 @@ namespace ConsoleApplication
                 {
                     Menu();
                 }
-
-
-
             }
-
-
+            
             Console.Clear();
             var winner = f1.Ships.Select(x => x.Hp).Sum() > f2.Ships.Select(x => x.Hp).Sum()
                 ? "First player"
@@ -400,15 +368,7 @@ namespace ConsoleApplication
 
         static void Save(object obj, List<Field> list)
         {
-
-            IMemento memento1 = new JsonMemento("C:\\Users\\CSharpSila\\Desktop\\mem.json");
-            memento1.Save(list[0]);
-
-            memento1 = new XmlMemento("C:\\Users\\CSharpSila\\Desktop\\mem.xml");
-            memento1.Save(list[1]);
-
-            Console.Clear();
-            Console.WriteLine("Saved");
+            
         }
 
         static Field CreateField(string name)

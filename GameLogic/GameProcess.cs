@@ -86,8 +86,5 @@ namespace GameLogic
 
             return MakeStep(point, field);
         }
-
-        
-
     }
 }
