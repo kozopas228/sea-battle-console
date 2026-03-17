@@ -33,9 +33,7 @@ SeaBattleTRPZ/
 **Requirements:** .NET 5.0 SDK or higher
 
 ```bash
-# Clone and run
-git clone https://github.com/yourusername/SeaBattleTRPZ.git
-cd SeaBattleTRPZ
+# Run
 dotnet run --project ConsoleApplication
 
 # Run tests
